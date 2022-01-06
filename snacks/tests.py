@@ -8,3 +8,9 @@ class snacksTest(SimpleTestCase):
         url = reverse('snacks')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
+
+        
+    def test_snacks_page_template(self):
+        url = reverse('snacks')
+        response = self.client.get(url)
+        self.assertTemplateUsed(response, 'snacks.html')
