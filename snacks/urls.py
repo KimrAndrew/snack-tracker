@@ -1,6 +1,6 @@
 from django.urls import path, include
-from .views import SnackPageView
+from .views import SnackPageView, SnackListView
 
 urlpatterns = [
-    path('',SnackPageView.as_view(), name='snacks')
+    path('',SnackListView.as_view(), name='snacks')
 ]
